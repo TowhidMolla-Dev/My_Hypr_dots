@@ -4,9 +4,9 @@
 // sourced from header module //
 
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "mod": "dock",
-    "height": 28,
+    "height": 21,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -14,34 +14,12 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/padd","custom/l_end","cpu","memory","custom/r_end","custom/l_end","clock","custom/r_end","custom/padd"],
-	"modules-center": ["custom/padd","custom/l_end","wlr/workspaces","hyprland/window","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","network","bluetooth","pulseaudio","pulseaudio#microphone","custom/updates","custom/r_end","custom/l_end","tray","custom/r_end","custom/l_end","custom/wallchange","custom/mode","custom/wbar","custom/cliphist","custom/power","custom/r_end","custom/padd"],
+	"modules-left": ["custom/padd","custom/l_end","wlr/workspaces","hyprland/window","custom/r_end","custom/padd"],
+	"modules-center": ["custom/padd","custom/l_end","clock","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","cpu","memory","custom/r_end","custom/l_end","network","bluetooth","pulseaudio","pulseaudio#microphone","custom/updates","custom/r_end","custom/l_end","tray","custom/r_end","custom/l_end","custom/wallchange","custom/mode","custom/wbar","custom/cliphist","custom/power","custom/r_end","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
-
-    "cpu": {
-        "interval": 10,
-        "format": "󰍛 {usage}%",
-        "format-alt": "{icon0}{icon1}{icon2}{icon3}",
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
-    },
-
-    "memory": {
-        "interval": 30,
-        "format": "󰾆 {percentage}%",
-        "format-alt": "󰾅 {used}GB",
-        "max-length": 10,
-        "tooltip": true,
-        "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
-    },
-
-    "clock": {
-        "format": "{: %I:%M %p 󰃭 %a %d}",
-        "format-alt": "{:󰥔 %H:%M  %b %Y}",
-        "tooltip-format": "<tt><big>{calendar}</big></tt>"
-    },
 
     "wlr/workspaces": {
         "disable-scroll": true,
@@ -74,6 +52,28 @@
             "(.*)Spotify": "Spotify 󰓇",
             "(.*)Steam": "Steam 󰓓"
         }
+    },
+
+    "clock": {
+        "format": "{: %I:%M %p 󰃭 %a %d}",
+        "format-alt": "{:󰥔 %H:%M  %b %Y}",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>"
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "󰍛 {usage}%",
+        "format-alt": "{icon0}{icon1}{icon2}{icon3}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "󰾆 {percentage}%",
+        "format-alt": "󰾅 {used}GB",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
     },
 
     "network": {
@@ -137,18 +137,20 @@
     },
 
     "tray": {
-        "icon-size": 16,
+        "icon-size": 12,
         "spacing": 5
     },
 
     "custom/wallchange": {
         "format": "{}",
         "exec": "echo ; echo 󰆊 switch wallpaper",
-        "on-click": "~/.config/swww/swwwallpaper.sh -n 3",
-        "on-click-right": "~/.config/swww/swwwallpaper.sh -p 3",
+        "on-click": "~/.config/hypr/scripts/swwwallpaper.sh -n",
+        "on-click-right": "~/.config/hypr/scripts/swwwallpaper.sh -p",
+        "on-click-middle": "sleep 0.1 && ~/.config/hypr/scripts/swwwallselect.sh",
         "interval" : 86400, // once every day
         "tooltip": true
     },
+
 
     "custom/mode": {
         "format": "{}",
@@ -173,22 +175,20 @@
     "custom/cliphist": {
         "format": "{}",
         "exec": "echo ; echo 󰅇 clipboard history",
-        "on-click": "sleep 0.1 && ~/.config/hypr/scripts/cliphist.sh c 3",
+        "on-click": "sleep 0.1 && ~/.config/hypr/scripts/cliphist.sh c 2",
         //"on-click-right": "sleep 0.1 && ~/.config/hypr/scripts/cliphist.sh d",
-        "on-click-middle": "sleep 0.1 && ~/.config/hypr/scripts/cliphist.sh w 3",
+        "on-click-middle": "sleep 0.1 && ~/.config/hypr/scripts/cliphist.sh w 2",
         "interval" : 86400, // once every day
         "tooltip": true
     },
 
-    "custom/power": {
-        "format": "{}",
-        "exec": "echo ; echo  logout",
-        "on-click": "wlogout -b 2 -c 0 -r 0 -L 930 -R 930 -T 300 -B 300 --protocol layer-shell",
-        "interval" : 86400, // once every day
-        "tooltip": true
-    },
-
-
+"custom/power": {
+    "format": "{}",
+    "exec": "echo ; echo  logout",
+    "on-click": "~/.config/hypr/scripts/logoutlaunch.sh 2",
+    "interval" : 86400, // once every day
+    "tooltip": true
+},
 // modules for padding //
 
     "custom/l_end": {
