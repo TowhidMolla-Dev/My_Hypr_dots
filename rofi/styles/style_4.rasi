@@ -18,7 +18,7 @@ configuration {
 // Main //
 window {
     height:                      500px;
-    width:                       800px;
+    width:                       750px;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
@@ -33,9 +33,8 @@ window {
 mainbox {
     enabled:                     true;
     spacing:                     0px;
-    padding:                     0px;
-    orientation:                 vertical;
-    children:                    [ "inputbar" , "listbox" , "mode-switcher" ];
+    orientation:                 horizontal;
+    children:                    [ "inputbar" , "mode-switcher" , "listbox" ];
     background-color:            transparent;
     background-image:            url("~/.config/swww/wall.blur", height);
 }
@@ -44,50 +43,27 @@ mainbox {
 // Inputs //
 inputbar {
     enabled:                     true;
+    width:                       180px;
     children:                    [ "entry" ];
+    background-image:            url("~/.config/swww/wall.set", height);
 }
 entry {
     enabled:                     false;
 }
 
 
-// Lists //
-listbox {
-    padding:                     0px;
-    spacing:                     0px;
-    orientation:                 horizontal;
-    children:                    [ "listview" ];
-    background-color:            transparent;
-}
-listview {
-    padding:                     30px;
-    spacing:                     10px;
-    enabled:                     true;
-    columns:                     5;
-    cycle:                       true;
-    dynamic:                     true;
-    scrollbar:                   false;
-    layout:                      vertical;
-    reverse:                     false;
-    fixed-height:                true;
-    fixed-columns:               true;
-    cursor:                      "default";
-    background-color:            @background;
-    text-color:                  @foreground;
-}
-
-
 // Modes //
-mode-switcher {
-    orientation:                 horizontal;
+mode-switcher{
+    orientation:                 vertical;
     enabled:                     true;
-    padding:                     30px 160px 30px 160px;
-    spacing:                     50px;
+    spacing:                     0px;
+    width:                       100px;
+    padding:                     70px 10px 70px 20px;
+    spacing:                     25px;
     background-color:            transparent;
 }
 button {
     cursor:                      pointer;
-    padding:                     30px;
     border-radius:               50px;
     background-color:            @background;
     text-color:                  @foreground;
@@ -98,13 +74,37 @@ button selected {
 }
 
 
+// Lists //
+listbox {
+    spacing:                     5px;
+    padding:                     10px;
+    children:                    [ "listview" ];
+    background-color:            transparent;
+}
+listview {
+    padding:                     20px;
+    enabled:                     true;
+    columns:                     1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    cursor:                      "default";
+    background-color:            @background;
+    text-color:                  @foreground;
+    border-radius:               30px;
+}
+
+
 // Elements //
 element {
-    orientation:                 vertical;
     enabled:                     true;
-    spacing:                     10px;
-    padding:                     10px;
-    border-radius:               25px;
+    spacing:                     30px;
+    padding:                     6px;
+    border-radius:               20px;
     cursor:                      pointer;
     background-color:            transparent;
     text-color:                  @foreground;
@@ -134,14 +134,14 @@ element selected.active {
     text-color:                  @selected-active-foreground;
 }
 element-icon {
-    size:                        90px;
+    size:                        48px;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;
 }
 element-text {
     vertical-align:              0.5;
-    horizontal-align:            0.5;
+    horizontal-align:            0.0;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;

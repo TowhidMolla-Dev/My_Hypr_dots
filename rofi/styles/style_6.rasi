@@ -18,7 +18,7 @@ configuration {
 // Main //
 window {
     height:                      500px;
-    width:                       800px;
+    width:                       600px;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
@@ -34,20 +34,42 @@ mainbox {
     enabled:                     true;
     spacing:                     0px;
     padding:                     0px;
-    orientation:                 vertical;
-    children:                    [ "inputbar" , "listbox" , "mode-switcher" ];
-    background-color:            transparent;
-    background-image:            url("~/.config/swww/wall.blur", height);
+    orientation:                 horizontal;
+    children:                    [ "inputbar" , "mode-switcher" , "listbox" ];
+    background-color:            @background;
 }
 
 
 // Inputs //
 inputbar {
+    width:                       0px;
     enabled:                     true;
     children:                    [ "entry" ];
 }
 entry {
     enabled:                     false;
+}
+
+
+// Modes //
+mode-switcher {
+    width:                       150px;
+    orientation:                 vertical;
+    enabled:                     true;
+    padding:                     80px 40px 80px 40px;
+    spacing:                     20px;
+    background-color:            @background;
+}
+button {
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+button selected {
+    padding:                     5px;
+    border-radius:               50px;
+    background-color:            @foreground;
+    text-color:                  @background;
 }
 
 
@@ -61,9 +83,9 @@ listbox {
 }
 listview {
     padding:                     30px;
-    spacing:                     10px;
+    spacing:                     0px;
     enabled:                     true;
-    columns:                     5;
+    columns:                     1;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -72,39 +94,18 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     cursor:                      "default";
-    background-color:            @background;
-    text-color:                  @foreground;
-}
-
-
-// Modes //
-mode-switcher {
-    orientation:                 horizontal;
-    enabled:                     true;
-    padding:                     30px 160px 30px 160px;
-    spacing:                     50px;
     background-color:            transparent;
-}
-button {
-    cursor:                      pointer;
-    padding:                     30px;
-    border-radius:               50px;
-    background-color:            @background;
     text-color:                  @foreground;
-}
-button selected {
-    background-color:            @foreground;
-    text-color:                  @background;
 }
 
 
 // Elements //
 element {
-    orientation:                 vertical;
+    orientation:                 horizontal;
     enabled:                     true;
-    spacing:                     10px;
+    spacing:                     20px;
     padding:                     10px;
-    border-radius:               25px;
+    border-radius:               20px;
     cursor:                      pointer;
     background-color:            transparent;
     text-color:                  @foreground;
@@ -134,14 +135,14 @@ element selected.active {
     text-color:                  @selected-active-foreground;
 }
 element-icon {
-    size:                        90px;
+    size:                        50px;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;
 }
 element-text {
     vertical-align:              0.5;
-    horizontal-align:            0.5;
+    horizontal-align:            0;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;

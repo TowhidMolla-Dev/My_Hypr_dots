@@ -17,8 +17,8 @@ configuration {
 
 // Main //
 window {
-    height:                      500px;
-    width:                       800px;
+    height:                      600px;
+    width:                       900px;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
@@ -35,7 +35,7 @@ mainbox {
     spacing:                     0px;
     padding:                     0px;
     orientation:                 vertical;
-    children:                    [ "inputbar" , "listbox" , "mode-switcher" ];
+    children:                    [ "inputbar" , "listbox" ];
     background-color:            transparent;
     background-image:            url("~/.config/swww/wall.blur", height);
 }
@@ -44,26 +44,35 @@ mainbox {
 // Inputs //
 inputbar {
     enabled:                     true;
+    spacing:                     0px;
+    padding:                     80px;
     children:                    [ "entry" ];
+    background-color:            @background;
+    background-image:            url("~/.config/swww/wall.set", width);
 }
 entry {
-    enabled:                     false;
+    border-radius:               30px;
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     20px;
+    text-color:                  @foreground;
+    background-color:            @background;
 }
 
 
 // Lists //
 listbox {
-    padding:                     0px;
+    padding:                     30px;
     spacing:                     0px;
     orientation:                 horizontal;
-    children:                    [ "listview" ];
-    background-color:            transparent;
+    children:                    [ "listview" , "mode-switcher" ];
+    background-color:            @background;
 }
 listview {
-    padding:                     30px;
+    padding:                     10px;
     spacing:                     10px;
     enabled:                     true;
-    columns:                     5;
+    columns:                     2;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -72,22 +81,19 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     cursor:                      "default";
-    background-color:            @background;
+    background-color:            transparent;
     text-color:                  @foreground;
 }
-
-
-// Modes //
 mode-switcher {
-    orientation:                 horizontal;
+    orientation:                 vertical;
+    width:                       95px;
     enabled:                     true;
-    padding:                     30px 160px 30px 160px;
-    spacing:                     50px;
+    padding:                     15px;
+    spacing:                     10px;
     background-color:            transparent;
 }
 button {
     cursor:                      pointer;
-    padding:                     30px;
     border-radius:               50px;
     background-color:            @background;
     text-color:                  @foreground;
@@ -100,10 +106,9 @@ button selected {
 
 // Elements //
 element {
-    orientation:                 vertical;
     enabled:                     true;
-    spacing:                     10px;
-    padding:                     10px;
+    spacing:                     20px;
+    padding:                     9px;
     border-radius:               25px;
     cursor:                      pointer;
     background-color:            transparent;
@@ -134,14 +139,14 @@ element selected.active {
     text-color:                  @selected-active-foreground;
 }
 element-icon {
-    size:                        90px;
+    size:                        47px;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;
 }
 element-text {
     vertical-align:              0.5;
-    horizontal-align:            0.5;
+    horizontal-align:            0.0;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;
