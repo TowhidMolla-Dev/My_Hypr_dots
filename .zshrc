@@ -72,9 +72,25 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git
+	zsh-autosuggestions
+	sudo
+	copyfile
+	copybuffer
+	dirhistory
+	history
+	timer
+	command-not-found
+	aliases
+	alias-finder
+	z
+	history-substring-search
+	rsync
+	gradle
+emoji-clock
+	
+	)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -102,14 +118,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias  l='exa -l  --icons'
-alias ls='exa -1  --icons'
-alias ll='exa -la --icons'
-alias ld='exa -lD --icons'
 
-alias ls='ls -la'
+alias ls='exa --icons -h'
+alias lt='exa -aT --icons -h'
+alias ll='exa -lag --icons -h'
+alias lad='exa -laD --icons -h'
+alias la='exa -a --icons -h'
 
-alias git-bare='git --git-dir=$HOME/Downloads/my_dotfiles --work-tree=$HOME'
+alias grep="grep --color=auto"
+
+
+
 
 
 alias in='sudo pacman -S' # install package
@@ -131,5 +150,13 @@ alias httpsmirrors='rate-mirrors --allow-root --protocol https arch | sudo tee /
 #Display Pokemon
 pokemon-colorscripts --no-title -r 1,3,6
 
+zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
+zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
+zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
+zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
+
+zstyle ':completion:*' menu select
+
 #Display gif
 #kitten icat --align left ~/.config/neofetch/pochita.gif
+
