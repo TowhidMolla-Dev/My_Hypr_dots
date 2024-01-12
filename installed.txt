@@ -97,6 +97,29 @@ wl-gammarelay-rs 0.3.0-1
 wlogout 1.1.1-3
 xwaylandvideobridge-bin j1413589-1
 yay 12.2.0-1
+
+
+
+
+Name                           Application ID                           Version         Branch         Installation
+Multiplication Puzzle          app.drey.MultiplicationPuzzle            13.0            stable         system
+Decoder                        com.belmoussaoui.Decoder                 0.4.1           stable         system
+Czkawka                        com.github.qarmin.czkawka                6.1.0           stable         system
+Easy Effects                   com.github.wwmm.easyeffects              7.1.3           stable         system
+CPod                           com.github.z.Cumulonimbus                1.28.0          stable         system
+Extension Manager              com.mattjakeman.ExtensionManager         0.4.3           stable         system
+Blanket                        com.rafaelmardojai.Blanket               0.6.0           stable         system
+ZapZap                         com.rtosta.zapzap                        5.1.1           stable         system
+Metadata Cleaner               fr.romainvigier.MetadataCleaner          2.5.4           stable         system
+Boop-GTK                       fyi.zoey.Boop-GTK                        1.6.0           stable         system
+BoxBuddy                       io.github.dvlv.boxbuddyrs                1.0.7           stable         system
+Errands                        io.github.mrvladus.List                  45.1.4          stable         system
+Kooha                          io.github.seadve.Kooha                   2.2.4           stable         system
+NewsFlash                      io.gitlab.news_flash.NewsFlash           3.0.2           stable         system
+Calculator                     org.gnome.Calculator                     45.0.2          stable         system
+Disk Usage Analyzer            org.gnome.baobab                         45.0            stable         system
+Imaginer                       page.codeberg.Imaginer.Imaginer          0.2.2           stable         system
+Pocket Casts                   tech.feliciano.pocket-casts              0.5.0           stable         system
 zathura 0.5.4-1
 zram-generator 1.1.2-1
 zsh-theme-powerlevel10k-git r4202.174ce9bf-1
