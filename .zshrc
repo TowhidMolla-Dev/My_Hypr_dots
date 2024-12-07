@@ -1,12 +1,14 @@
-# Path to your oh-my-zsh installation.
+# Oh-my-zsh installation path
 ZSH=/usr/share/oh-my-zsh/
 
-
+# Powerlevel10k theme path
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-plugins=(git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting history-substring-search aliases alias-finder copyfile dirhistory copybuffer)
+# List of plugins used
+plugins=(git sudo history-substring-search zsh-syntax-highlighting zsh-autosuggestions zsh-256color aliases alias-finder copyfile dirhistory copybuffer)
 source $ZSH/oh-my-zsh.sh
 
+# In case a command is not found, try to find the package that has it
 function command_not_found_handler {
     local purple='\e[1;35m' bright='\e[0;1m' green='\e[1;32m' reset='\e[0m'
     printf 'zsh: command not found: %s\n' "$1"
@@ -16,7 +18,7 @@ function command_not_found_handler {
         local pkg
         for entry in "${entries[@]}" ; do
             local fields=( ${(0)entry} )
-            if [[ "$pkg" != "${fields[2]}" ]] ; then
+            if [[ "$pkg" != "${fields[2]}" ]]; then
                 printf "${purple}%s/${bright}%s ${green}%s${reset}\n" "${fields[1]}" "${fields[2]}" "${fields[3]}"
             fi
             printf '    /%s\n' "${fields[4]}"
@@ -26,59 +28,77 @@ function command_not_found_handler {
     return 127
 }
 
-# Detect the AUR wrapper
-if pacman -Qi yay &>/dev/null ; then
+# Detect AUR wrapper
+if pacman -Qi yay &>/dev/null; then
    aurhelper="yay"
-elif pacman -Qi paru &>/dev/null ; then
+elif pacman -Qi paru &>/dev/null; then
    aurhelper="paru"
 fi
 
-
 function in {
-    local pkg="$1"
-    if pacman -Si "$pkg" &>/dev/null ; then
-        sudo pacman -S "$pkg"
-    else 
-        "$aurhelper" -S "$pkg"
+    local -a inPkg=("$@")
+    local -a arch=()
+    local -a aur=()
+
+    for pkg in "${inPkg[@]}"; do
+        if pacman -Si "${pkg}" &>/dev/null; then
+            arch+=("${pkg}")
+        else
+            aur+=("${pkg}")
+        fi
+    done
+
+    if [[ ${#arch[@]} -gt 0 ]]; then
+        sudo pacman -S "${arch[@]}"
+    fi
+
+    if [[ ${#aur[@]} -gt 0 ]]; then
+        ${aurhelper} -S "${aur[@]}"
     fi
 }
 
 # Helpful aliases
-alias v='nvim' #neovim
-
-alias  l='eza -lh  --icons=auto' # long list
-alias ls='eza -1   --icons=auto' # short list
+alias c='clear' # clear terminal
+alias l='eza -lh --icons=auto' # long list
+alias ls='eza -1 --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
+alias lt='eza --icons=auto --tree' # list folder as tree
 alias un='$aurhelper -Rns' # uninstall package
 alias up='$aurhelper -Syu' # update system/package/aur
 alias pl='$aurhelper -Qs' # list installed package
-alias pa='$aurhelper -Ss' # list availabe package
+alias pa='$aurhelper -Ss' # list available package
 alias pc='$aurhelper -Sc' # remove unused cache
 alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
+alias vc='code' # gui code editor
 
-#alias vc='code' # gui code editor
+# Directory navigation shortcuts
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
 
 alias grep="grep --color=auto"
 
 alias httpsmirrors='rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist'
 
 alias emulator="QT_QPA_PLATFORM=xcb emulator"
-
-
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_HOME/emulator:$PATH
 
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+
+# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
+alias mkdir='mkdir -p'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#Display specs
-neofetch
-
-#Display Pokemon
+# Display Pokemon
 #pokemon-colorscripts --no-title -r 1,3,6
 
-#Display random gifs
-#kitten icat --align left $(find $HOME/.config/neofetch/gifs/ -name "*.gif" | sort -R | head -1)
+
+fastfetch
+
