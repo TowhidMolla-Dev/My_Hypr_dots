@@ -1,119 +1,46 @@
-amd-ucode 20231211.f2e52a1c-1
-apache-git 2.4.58.r11441.gdee495f7f8-1
-ark 23.08.4-1
-azuredatastudio-bin 1.47.0-1
-base 3-2
-base-devel 1-1
-betterdiscord-installer 1.3.0-1
-bibtool 2.68-6
-bitwarden 2023.12.1-1
-blender-git 4.1.r130453.g23430f4db86-1
-blueman 2.3.5-2
-bluez-utils 5.71-3
-brightnessctl 0.5.1-2
-btop 1.3.0-1
-buku 4.8-3
-cartridges 2.7.2-1
-cliphist 1:0.4.0-2
-discord_arch_electron 0.0.39-1
-distrobox 1.6.0.1-1
-dolphin 23.08.4-1
-dunst 1.9.2-1
-espanso 2.2.1-2
-eza 0.17.0-1
-figma-linux 0.11.2-1
-firefox 121.0-1
-flatseal 2.1.0-1
-foot 1.16.2-2
-forgit 24.01.0-1
-freedownloadmanager 6.20.0.5510-1
-fsearch-git 0.2.r175.g20fb6dc-1
-gedit 46.1-1
-genymotion 3.6.0-1
-google-chrome 120.0.6099.199-1
-gparted-git 1.5.0.r78.g5a6b8afc-1
-grimblast-git r89.fe26a90-1
-gromit-mpx-git 1.5.1.r1.g6084ce8-1
-hyprshade 3.0.1-1
-jetbrains-toolbox 2.1.3.18901-1
-kitty 0.31.0-1
-komikku 1.33.0-1
-kvantum 1.0.10-2
-lazygit 0.40.2-1
-lf 31-1
-man-db 2.12.0-1
-mangohud 0.7.0-2
-mission-center 0.4.3-1
-mobicon-cli 3.0.0-1
-mpv 1:0.37.0-1
-mupdf-tools 1.23.7-1
-nano 7.2-1
-nautilus 45.2.1-1
-ncdu 2.3-1
-neofetch 7.1.0-2
-neovim 0.9.5-1
-netbeans 16-1
-network-manager-applet 1.34.0-1
-newsraft 0.22-2
-nwg-look 0.2.5-1
-oh-my-zsh-git r7046.c8e600f39-1
-pacman-contrib 1.10.1-1
-pamac-aur 11.7.1-1
-pamixer 1.6-2
-parallel 20231222-1
-pavucontrol 1:5.0+r64+geba9ca6-1
-pokemon-colorscripts-git r112.0483c85-1
-python-pyamdgpuinfo 2.1.6-1
-qbittorrent-enhanced 4.6.2.10-1
-qt5-quickcontrols 5.15.12-1
-qt5-quickcontrols2 5.15.12+kde+r5-1
-qt5ct 1.8-1
-radio-active 2.8.0-1
-ranger 1.9.3-9
-rate-mirrors 0.17.0-1
-reflector 2023-1
-rofi-lbonn-wayland-git 1.7.5.wayland2.r151.g5cd1e3ca-1
-scrcpy 2.3.1-1
-sddm-git 0.20.0.14.g132f105-1
-selectdefaultapplication-git r22.c752df6-1
-showmethekey 1.12.0-1
-swappy 1.5.1-1
-swww 0.8.1-0
-syncthing 1.27.2-1
-teams-for-linux 1.4.1-1
-term-pdf 0.0.4.4-1
-thunderbird 115.6.0-1
-tldr 3.2.0-1
-tty-clock 2.3-2
-update-grub 0.0.1-8
-v4l2loopback-dkms 0.12.7-2
-vim-runtime 9.1.0000-1
-virt-manager 4.1.0-2
-visual-studio-code-bin 1.85.1-1
-waybar 0.9.24-2
-wego 2.1-1
-wf-recorder 0.4.1-1
-wl-gammarelay-rs 0.3.0-1
-wlogout 1.1.1-3
-xwaylandvideobridge-bin j1413589-1
-yay 12.2.0-1
+Name                                                Application ID                                                Version                                Branch                   Installation
+Zen                                                 app.zen_browser.zen                                           1.8.2b                                 stable                   system
+Flatseal                                            com.github.tchx84.Flatseal                                    2.3.0                                  stable                   system
+Video Downloader                                    com.github.unrud.VideoDownloader                              0.12.21                                stable                   system
+Celeste                                             com.hunterwittenborn.Celeste                                  0.8.3                                  stable                   system
+Blanket                                             com.rafaelmardojai.Blanket                                    0.7.0                                  stable                   system
+WPS Office                                          com.wps.Office                                                11.1.0.11719                           stable                   system
+Metadata Cleaner                                    fr.romainvigier.MetadataCleaner                               2.5.6                                  stable                   system
+Sitemarker                                          io.github.aerocyber.sitemarker                                3.0.0                                  stable                   system
+Embellish                                           io.github.getnf.embellish                                     v0.4.5                                 stable                   system
+Flatsweep                                           io.github.giantpinkrobots.flatsweep                           v2024.12.23                            stable                   system
+Inspector                                           io.github.nokse22.inspector                                   0.2.0                                  stable                   system
+VirtAudio                                           io.github.sigmasd.VirtAudio                                   0.0.9                                  stable                   system
+Upscaler                                            io.gitlab.theevilskeleton.Upscaler                            1.4.1                                  stable                   system
+Mission Center                                      io.missioncenter.MissionCenter                                0.6.2                                  stable                   system
+BleachBit                                           org.bleachbit.BleachBit                                       v4.6.2                                 stable                   system
+Code::Blocks                                        org.codeblocks.codeblocks                                     Development-Version                    stable                   system
+Freedesktop Platform                                org.freedesktop.Platform                                      freedesktop-sdk-23.08.28               23.08                    system
+Freedesktop Platform                                org.freedesktop.Platform                                      freedesktop-sdk-24.08.14               24.08                    system
+Mesa                                                org.freedesktop.Platform.GL.default                           24.3.4                                 23.08                    system
+Mesa (Extra)                                        org.freedesktop.Platform.GL.default                           24.3.4                                 23.08-extra              system
+Mesa                                                org.freedesktop.Platform.GL.default                           24.3.4                                 24.08                    system
+Mesa (Extra)                                        org.freedesktop.Platform.GL.default                           24.3.4                                 24.08extra               system
+FFmpeg extension with extra codecs                  org.freedesktop.Platform.ffmpeg-full                                                                 23.08                    system
+FFmpeg extension with extra codecs                  org.freedesktop.Platform.ffmpeg-full                                                                 24.08                    system
+openh264                                            org.freedesktop.Platform.openh264                             2.1.0                                  2.2.0                    system
+openh264                                            org.freedesktop.Platform.openh264                             2.4.1                                  2.4.1                    system
+Freedesktop SDK                                     org.freedesktop.Sdk                                           freedesktop-sdk-24.08.14               24.08                    system
+Crosswords                                          org.gnome.Crosswords                                          0.3.14                                 stable                   system
+GNOME Crosswords Extra Puzzles                      org.gnome.Crosswords.PuzzleSets.gnome                                                                1                        system
+Keesing-puzzelsets                                  org.gnome.Crosswords.PuzzleSets.keesing                                                              1                        system
+Niente per niente Crosswords                        org.gnome.Crosswords.PuzzleSets.nienteperniente                                                      1                        system
+Oedipus Crosswords                                  org.gnome.Crosswords.PuzzleSets.oedipus                                                              1                        system
+The Guardian daily cryptic downloader               org.gnome.Crosswords.PuzzleSets.puzzlepull                                                           1                        system
+De Telegraaf-puzzelsets                             org.gnome.Crosswords.PuzzleSets.pzzl                                                                 1                        system
+Daily newspaper downloader                          org.gnome.Crosswords.PuzzleSets.xword-dl                                                             1                        system
+GNOME Application Platform version 46               org.gnome.Platform                                                                                   46                       system
+GNOME Application Platform version 47               org.gnome.Platform                                                                                   47                       system
+Fonts                                               org.gnome.font-viewer                                         47.0                                   stable                   system
+Al Quran (Tafsir & By Word)                         org.gtaf.quran                                                0.5.11                                 stable                   system
+KDE Application Platform                            org.kde.Platform                                                                                     6.7                      system
+qBittorrent                                         org.qbittorrent.qBittorrent                                   5.0.4                                  stable                   system
+Sly                                                 page.kramo.Sly                                                1.0.0                                  stable                   system
 
 
-
-Name                         Application ID                           Version         Branch         Installation
-Decoder                      com.belmoussaoui.Decoder                 0.4.1           stable         system
-Czkawka                      com.github.qarmin.czkawka                6.1.0           stable         system
-Easy Effects                 com.github.wwmm.easyeffects              7.1.3           stable         system
-CPod                         com.github.z.Cumulonimbus                1.28.0          stable         system
-Extension Manager            com.mattjakeman.ExtensionManager         0.4.3           stable         system
-Blanket                      com.rafaelmardojai.Blanket               0.6.0           stable         system
-ZapZap                       com.rtosta.zapzap                        5.1.1           stable         system
-Metadata Cleaner             fr.romainvigier.MetadataCleaner          2.5.4           stable         system
-Boop-GTK                     fyi.zoey.Boop-GTK                        1.6.0           stable         system
-BoxBuddy                     io.github.dvlv.boxbuddyrs                1.0.7           stable         system
-Errands                      io.github.mrvladus.List                  45.1.4          stable         system
-Kooha                        io.github.seadve.Kooha                   2.2.4           stable         system
-Calculator                   org.gnome.Calculator                     45.0.2          stable         system
-Disk Usage Analyzer          org.gnome.baobab                         45.0            stable         system
-Imaginer                     page.codeberg.Imaginer.Imaginer          0.2.2           stable         system
-zsh-theme-powerlevel10k-git r4202.174ce9bf-1
+Eloquent                                            re.sonny.Eloquent                                             1.2                                    stable                   system
