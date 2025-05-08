@@ -1,0 +1,291 @@
+PACMAN
+
+pacman -Qqe
+
+----------------------------------------
+
+7zip
+adw-gtk-theme-git
+agsv1
+agsv1-debug
+amd-ucode
+android-emulator
+anki-bin
+apple-fonts
+ark
+axel
+ayugram-desktop-git
+base
+base-devel
+bat
+bc
+blueberry
+blueman
+bluez
+bluez-utils
+boost
+brew-git
+brightnessctl
+btop
+btrfs-progs
+chaotic-keyring
+chaotic-mirrorlist
+chrpath
+cliphist
+cmake
+countryfetch
+cursor-bin
+dart-sass
+ddcutil
+dolphin
+dooit
+dooit-extras
+downgrade
+dunst
+electron
+escrcpy-bin
+evince
+eza
+fastfetch
+fcitx5
+ffmpegthumbs
+fish
+flatpak
+foot
+freedownloadmanager
+fzf
+gammastep
+ghostty
+git
+github-desktop-bin
+glib2-devel
+gnome-bluetooth-3.0
+gnome-calculator
+gnome-control-center
+gnome-disk-utility
+gnome-screenshot
+gnome-shell
+gnome-terminal
+gradience
+grim
+grub
+gst-plugin-pipewire
+gtksourceview3
+gtksourceviewmm
+hypridle
+hyprland
+hyprlock
+hyprpicker
+hyprsunset
+illogical-impulse-portal
+imagemagick
+jetbrains-toolbox
+jq
+kde-cli-tools
+kitty
+kvantum
+kvantum-qt5
+libinput-gestures
+libnotify
+linux
+linux-firmware
+linux-zen
+localsend-git
+man-db
+matugen-bin
+meld
+meson
+metar
+mingw-w64-gcc
+mpv
+nautilus
+nekoray-bin
+network-manager-applet
+newsflash
+noto-fonts-emoji
+npm
+ntfs-3g
+nvme-cli
+nwg-displays
+nwg-look
+openbangla-keyboard-bin
+p7zip-gui
+pacman-contrib
+pamixer
+parallel
+pavucontrol
+pik
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+plasma-browser-integration
+pokego-bin
+polkit-gnome
+power-profiles-daemon
+python-libsass
+python-pillow
+python-psutil
+python-pyamdgpuinfo
+python-pywal
+python-pywalfox
+python-pywayland
+python-setuptools-scm
+qt5-graphicaleffects
+qt5-imageformats
+qt5-quickcontrols
+qt5-quickcontrols2
+qt5-wayland
+qt5ct
+qt6-wayland
+qt6ct
+rate-mirrors
+rofi-emoji
+rofi-wayland
+rsync
+rustup
+satty
+sddm
+slurp
+smassh-bin
+starship
+subversion
+swappy
+swaylock-effects
+swww
+tesseract
+tesseract-data-eng
+tinyxml2
+ttf-gabarito-git
+ttf-jetbrains-mono-nerd
+ttf-material-symbols-variable-git
+ttf-noto-sans-cjk-vf
+ttf-readex-pro
+ttf-rubik-vf
+ttf-space-mono-nerd
+typescript
+udiskie
+unzip
+vesktop-bin
+vim
+visual-studio-code-bin
+waybar
+webp-pixbuf-loader
+wf-recorder
+wget
+whatsie-git
+wlogout
+xterm
+yad
+yay
+yay-debug
+yazi
+ydotool
+zip
+zoom
+zram-generator
+zsh
+zsh-theme-powerlevel10k-git
+
+
+-----------------------------------------------------------------------------------------------------------
+
+-----------------------------
+yay -Qqm
+-----------------------------
+adw-gtk-theme-git
+agsv1
+agsv1-debug
+anki-bin
+anki-bin-debug
+brew-git
+brew-git-debug
+countryfetch-debug
+cursor-bin
+dooit
+dooit-extras
+electron33
+escrcpy-bin
+escrcpy-bin-debug
+github-desktop-bin
+github-desktop-bin-debug
+gradience
+illogical-impulse-portal
+matugen-bin
+matugen-bin-debug
+metar
+nekoray-bin
+notion-app-enhanced-debug
+openbangla-keyboard-bin
+pokego-bin
+python-anyascii
+python-material-color-utilities
+python-pyamdgpuinfo
+python-pyamdgpuinfo-debug
+python-pywalfox
+python-yapsy-git
+smassh-bin
+ttf-gabarito-git
+ttf-noto-sans-cjk-vf
+ttf-rubik-vf
+vesktop-bin
+yay-debug
+
+-------------------------------------------------------------------------------------------------------------------
+
+----------------------------
+flatpak list
+----------------------------
+Name                                                Application ID                                         Version                               Branch                    Installation
+Zen                                                 app.zen_browser.zen                                    1.12.1b                               stable                    system
+Foliate                                             com.github.johnfactotum.Foliate                        3.3.0                                 stable                    system
+Quick Lookup                                        com.github.johnfactotum.QuickLookup                    2.1.2                                 stable                    system
+Clapper Enhancers                                   com.github.rafostar.Clapper.Enhancers                                                        stable                    system
+Flatseal                                            com.github.tchx84.Flatseal                             2.3.1                                 stable                    system
+Frog                                                com.github.tenderowl.frog                              1.6.0                                 stable                    system
+Video Downloader                                    com.github.unrud.VideoDownloader                       0.12.25                               stable                    system
+Celeste                                             com.hunterwittenborn.Celeste                           0.8.3                                 stable                    system
+Blanket                                             com.rafaelmardojai.Blanket                             0.7.0                                 stable                    system
+Bottles                                             com.usebottles.bottles                                 51.21                                 stable                    system
+WPS Office                                          com.wps.Office                                         11.1.0.11719                          stable                    system
+Pipeline                                            de.schmidhuberj.tubefeeder                             2.2.2                                 stable                    system
+Sitemarker                                          io.github.aerocyber.sitemarker                         3.0.0                                 stable                    system
+Embellish                                           io.github.getnf.embellish                              v0.4.6                                stable                    system
+Flatsweep                                           io.github.giantpinkrobots.flatsweep                    v2024.12.23                           stable                    system
+Inspector                                           io.github.nokse22.inspector                            0.2.0                                 stable                    system
+Raspirus                                            io.github.raspirus.raspirus                            2.2.0                                 stable                    system
+VirtAudio                                           io.github.sigmasd.VirtAudio                            0.0.9                                 stable                    system
+Switcheroo                                          io.gitlab.adhami3310.Converter                         2.4.0                                 stable                    system
+Upscaler                                            io.gitlab.theevilskeleton.Upscaler                     1.5.1                                 stable                    system
+Mission Center                                      io.missioncenter.MissionCenter                         1.0.0                                 stable                    system
+Clicker                                             net.codelogistics.clicker                              0.1.8                                 stable                    system
+BleachBit                                           org.bleachbit.BleachBit                                v5.0.0                                stable                    system
+Code::Blocks                                        org.codeblocks.codeblocks                              25.03                                 stable                    system
+Freedesktop Platform                                org.freedesktop.Platform                               freedesktop-sdk-23.08.30              23.08                     system
+Freedesktop Platform                                org.freedesktop.Platform                               freedesktop-sdk-24.08.18              24.08                     system
+Mesa                                                org.freedesktop.Platform.GL.default                    25.0.3                                23.08                     system
+Mesa (Extra)                                        org.freedesktop.Platform.GL.default                    25.0.3                                23.08-extra               system
+Mesa                                                org.freedesktop.Platform.GL.default                    25.0.3                                24.08                     system
+Mesa (Extra)                                        org.freedesktop.Platform.GL.default                    25.0.3                                24.08extra                system
+Mesa                                                org.freedesktop.Platform.GL32.default                  25.0.3                                24.08                     system
+FFmpeg extension with extra codecs                  org.freedesktop.Platform.ffmpeg-full                                                         23.08                     system
+FFmpeg extension with extra codecs                  org.freedesktop.Platform.ffmpeg-full                                                         24.08                     system
+i386                                                org.freedesktop.Platform.ffmpeg_full.i386                                                    24.08                     system
+openh264                                            org.freedesktop.Platform.openh264                      2.1.0                                 2.2.0                     system
+openh264                                            org.freedesktop.Platform.openh264                      2.4.1                                 2.4.1                     system
+openh264                                            org.freedesktop.Platform.openh264                      2.5.1                                 2.5.1                     system
+Freedesktop SDK                                     org.freedesktop.Sdk                                    freedesktop-sdk-24.08.18              24.08                     system
+GNOME Application Platform version 46               org.gnome.Platform                                                                           46                        system
+GNOME Application Platform version 47               org.gnome.Platform                                                                           47                        system
+GNOME Application Platform version 48               org.gnome.Platform                                                                           48                        system
+i386                                                org.gnome.Platform.Compat.i386                                                               47                        system
+Podcasts                                            org.gnome.Podcasts                                     25.2                                  stable                    system
+Fonts                                               org.gnome.font-viewer                                  48.0                                  stable                    system
+Al Quran (Tafsir & By Word)                         org.gtaf.quran                                         0.5.11                                stable                    system
+KDE Application Platform                            org.kde.Platform                                                                             6.7                       system
+KDE Application Platform                            org.kde.Platform                                                                             6.9                       system
+qBittorrent                                         org.qbittorrent.qBittorrent                            5.1.0                                 stable                    system
+gecko                                               org.winehq.Wine.gecko                                                                        stable-24.08              system
+mono                                                org.winehq.Wine.mono                                                                         stable-24.08              system
+Sly                                                 page.kramo.Sly                                         1.0.0                                 stable                    system
+Eloquent                                            re.sonny.Eloquent                                      1.2                                   stable                    system
