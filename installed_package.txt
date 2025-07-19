@@ -6,7 +6,8 @@ in
 2.python-pillow
 3.python-pytesseract
 4.sudo pacman -S ntfs-3g
-
+5.tesseract
+6.tesseract-data-eng
 
 
 github
