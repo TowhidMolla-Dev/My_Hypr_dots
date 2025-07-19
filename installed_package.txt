@@ -9,6 +9,7 @@ in
 5.tesseract
 6.tesseract-data-eng
 7.nano
+8.cursor
 
 
 github
