@@ -8,6 +8,7 @@ in
 4.sudo pacman -S ntfs-3g
 5.tesseract
 6.tesseract-data-eng
+7.nano
 
 
 github
