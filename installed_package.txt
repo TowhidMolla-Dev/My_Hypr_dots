@@ -9,7 +9,9 @@ in
 5.tesseract
 6.tesseract-data-eng
 7.nano
-8.cursor
+8.cursor( delete after some time)
+9.eza
+
 
 
 github
