@@ -1,6 +1,9 @@
 19-07-25
+exec-once = hyprctl dispatch exec "sleep 7s && qbittorrent"
 
-in
+
+
+
 ------
 1.dysk
 2.python-pillow
@@ -11,208 +14,54 @@ in
 7.nano
 8.cursor( delete after some time)
 9.eza
-
-
-
+10.bitwarden
+11.qBittorrent
+12.chrome
+13.cfs-zen-tweaks - systemctl enable --now set-cfs-tweaks.service
+14.sudo systemctl enable fstrim.timer
+15.sudo pacman -S linux-zen linux-zen-headers; sudo mkinitcpio -P; sudo grub-mkconfig -o /boot/grub/grub.cfg
+16.sudo sysctl vm.swappiness=1
+17.echo "vm.swappiness=1" | sudo tee /etc/sysctl.d/10-swappiness.conf 
+18./etc/default/grub ; Set GRUB_TIMEOUT to 1 ; sudo grub-mkconfig -o /boot/grub/grub.cfg
+19.sudo pacman -S logrotate (follow arch wiki compression code); sudo systemctl enable --now logrotate.timer
+20.sudo pacman -S reflector
+21.sudo pacman -S cronie; sudo systemctl enable --now cronie
+22.sudo EDITOR=nano crontab -e ; 0 15 * * 1 reflector -c Germany -l 5 --sort rate -p https --save /etc/pacman.d/mirrorlist
+23.iotop
+24.man-db
+25.sudo pacman -S vapoursynth
+26.yay -S vapoursynth-plugin-mvtools
 github
----------
+27.sudo pacman -S stow
+28.wget https://github.com/tomasklaen/uosc/releases/latest/download/uosc.zip -P ~/.config/mpv/
+unzip ~/.config/mpv/uosc.zip -d ~/.config/mpv/
+29.sudo pacman -S stow
+30.wget https://raw.githubusercontent.com/po5/thumbfast/master/thumbfast.lua -P ~/.config/mpv/scripts/
+chmod +x ~/.config/mpv/scripts/thumbfast.lua
+31.sudo pacman -S entr
+32.zen.urlbar.replace-newtab
+33.sudo pacman -S android-tools
+34.sudo pacman -S mtpfs gvfs-mtp
+   sudo systemctl restart udisks2
+35.
+
+
+
+
+
+
+
+-----------------------------------------
 1.OCR4Linux
 
-
+flathub
+---------
+1.flatpak install flathub io.github.amit9838.mousam
+2.flatpak install flathub io.github.zaedus.spider
 ----------------------------------------------------------------------
 ---------------------------------------------------------------------
 
-PACMAN
-
 pacman -Qqe
-
-----------------------------------------
-
-7zip
-adw-gtk-theme-git
-agsv1
-agsv1-debug
-amd-ucode
-android-emulator
-anki-bin
-apple-fonts
-ark
-axel
-ayugram-desktop-git
-base
-base-devel
-bat
-bc
-blueberry
-blueman
-bluez
-bluez-utils
-boost
-brew-git
-brightnessctl
-btop
-btrfs-progs
-chaotic-keyring
-chaotic-mirrorlist
-chrpath
-cliphist
-cmake
-countryfetch
-cursor-bin
-dart-sass
-ddcutil
-dolphin
-dooit
-dooit-extras
-downgrade
-dunst
-electron
-escrcpy-bin
-evince
-eza
-fastfetch
-fcitx5
-ffmpegthumbs
-fish
-flatpak
-foot
-freedownloadmanager
-fzf
-gammastep
-ghostty
-git
-github-desktop-bin
-glib2-devel
-gnome-bluetooth-3.0
-gnome-calculator
-gnome-control-center
-gnome-disk-utility
-gnome-screenshot
-gnome-shell
-gnome-terminal
-gradience
-grim
-grub
-gst-plugin-pipewire
-gtksourceview3
-gtksourceviewmm
-hypridle
-hyprland
-hyprlock
-hyprpicker
-hyprsunset
-illogical-impulse-portal
-imagemagick
-jetbrains-toolbox
-jq
-kde-cli-tools
-kitty
-kvantum
-kvantum-qt5
-libinput-gestures
-libnotify
-linux
-linux-firmware
-linux-zen
-localsend-git
-man-db
-matugen-bin
-meld
-meson
-metar
-mingw-w64-gcc
-mpv
-nautilus
-nekoray-bin
-network-manager-applet
-newsflash
-noto-fonts-emoji
-npm
-ntfs-3g
-nvme-cli
-nwg-displays
-nwg-look
-openbangla-keyboard-bin
-p7zip-gui
-pacman-contrib
-pamixer
-parallel
-pavucontrol
-pik
-pipewire
-pipewire-alsa
-pipewire-jack
-pipewire-pulse
-plasma-browser-integration
-pokego-bin
-polkit-gnome
-power-profiles-daemon
-python-libsass
-python-pillow
-python-psutil
-python-pyamdgpuinfo
-python-pywal
-python-pywalfox
-python-pywayland
-python-setuptools-scm
-qt5-graphicaleffects
-qt5-imageformats
-qt5-quickcontrols
-qt5-quickcontrols2
-qt5-wayland
-qt5ct
-qt6-wayland
-qt6ct
-rate-mirrors
-rofi-emoji
-rofi-wayland
-rsync
-rustup
-satty
-sddm
-slurp
-smassh-bin
-starship
-subversion
-swappy
-swaylock-effects
-swww
-tesseract
-tesseract-data-eng
-tinyxml2
-ttf-gabarito-git
-ttf-jetbrains-mono-nerd
-ttf-material-symbols-variable-git
-ttf-noto-sans-cjk-vf
-ttf-readex-pro
-ttf-rubik-vf
-ttf-space-mono-nerd
-typescript
-udiskie
-unzip
-vesktop-bin
-vim
-visual-studio-code-bin
-waybar
-webp-pixbuf-loader
-wf-recorder
-wget
-whatsie-git
-wlogout
-xterm
-yad
-yay
-yay-debug
-yazi
-ydotool
-zip
-zoom
-zram-generator
-zsh
-zsh-theme-powerlevel10k-git
-
-
------------------------------------------------------------------------------------------------------------
 
 -----------------------------
 yay -Qqm
